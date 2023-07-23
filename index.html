@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Movie Lab Server</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn-icons-png.flaticon.com/512/2184/2184561.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      * {
+        font-family: "Comfortaa", cursive;
+      }
+      input:focus {
+        border: 0px;
+        border-color: wheat;
+        background-color: rgb(246, 182, 182);
+      }
+      input {
+        background-color: rgb(254, 252, 232);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <div
+      class="h-full top-0 text-black font-bold text-4xl text-center py-4 sticky bg-gradient-to-r to-rose-300 from-amber-300 border-black border-b-2"
+    >
+      Movie Lab Server
+    </div>
+
+    <!-- Container Flex -->
+    <div
+      class="p-16 flex flex-row flex-wrap bg-gradient-to-r from-red-100 to-yellow-100"
+    >
+      <!-- Left Sections  -->
+      <div
+        class="border border-black text-center rounded-xl text-xl border-2 w-2/4 border-r-0"
+      >
+        <div class="container">
+          <div
+            class="w-full font-bold bg-red-100 rounded-xl border-b border-gray-900 p-2 text-2xl"
+          >
+            Input Form
+          </div>
+          <div class="form items-center p-2 bg-yellow-50">
+            <div>
+              Unique Number:
+              <input
+                class="border-b border-black text-red-500"
+                type="text"
+                id="inNumber"
+              />
+            </div>
+            <div>
+              Image URL:
+              <input
+                class="border-b border-black text-red-500"
+                type="text"
+                id="inAvatar"
+              />
+            </div>
+            <div>
+              Movie Name:
+              <input
+                class="border-b border-black text-red-500"
+                type="text"
+                id="inName"
+              />
+            </div>
+            <div>
+              Movie Category:
+              <input
+                class="border-b border-black text-red-500"
+                type="text"
+                id="inCategory"
+              />
+            </div>
+            <div>
+              Movie Size:
+              <input
+                class="border-b border-black text-red-500"
+                type="text"
+                id="inSize"
+              />
+            </div>
+            <div>
+              Movie Language:
+              <input
+                class="border-b border-black text-red-500"
+                type="text"
+                id="inLanguage"
+              />
+            </div>
+            <div>
+              Movie Trailer:
+              <input
+                class="border-b border-black text-red-500"
+                type="text"
+                id="inTrailer"
+              />
+            </div>
+            <div>
+              Movie Download:
+              <input
+                class="border-b border-black text-red-500"
+                type="text"
+                id="inDownload"
+              />
+            </div>
+          </div>
+
+          <div class="buttons bg-red-100 border-t border-gray-900 rounded-xl">
+            <button
+              id="clearform"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-red-300 rounded-xl px-2"
+            >
+              Clear Form
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Right Sections  -->
+      <div class="border border-black rounded-xl text-xl border-2 w-2/4">
+        <div class="container">
+          <div
+            class="w-full bg-pink-200 text-center font-bold rounded-xl items-center border-b border-gray-900 p-2 text-2xl"
+          >
+            Formation Selection
+          </div>
+          <!-- dhollywood -->
+          <div class="buttons bg-cyan-100 border border-gray-900 rounded-xl">
+            <button
+              class="bg-cyan-400 text-2xl font-bold rounded-xl m-1 py-1 px-2"
+            >
+              DhollyWood :
+            </button>
+            <button
+              id="dhinsert"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-green-300 rounded-xl px-2"
+            >
+              Insert
+            </button>
+            <button
+              id="dhread"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-blue-300 rounded-xl px-2"
+            >
+              Read
+            </button>
+            <button
+              id="dhupdate"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-yellow-300 rounded-xl px-2"
+            >
+              Update
+            </button>
+            <button
+              id="dhdelete"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-red-300 rounded-xl px-2"
+            >
+              Delete
+            </button>
+            <button
+              id="dhall"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-fuchsia-300 rounded-xl px-2"
+            >
+              View All
+            </button>
+          </div>
+          <!-- bollywood -->
+          <div class="buttons bg-violet-100 border border-gray-900 rounded-xl">
+            <button
+              class="bg-violet-400 text-2xl font-bold rounded-xl m-1 py-1 px-2"
+            >
+              BollyWood :
+            </button>
+            <button
+              id="bwinsert"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-green-300 rounded-xl px-2"
+            >
+              Insert
+            </button>
+            <button
+              id="bwread"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-blue-300 rounded-xl px-2"
+            >
+              Read
+            </button>
+            <button
+              id="bwupdate"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-yellow-300 rounded-xl px-2"
+            >
+              Update
+            </button>
+            <button
+              id="bwdelete"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-red-300 rounded-xl px-2"
+            >
+              Delete
+            </button>
+            <button
+              id="bwall"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-fuchsia-300 rounded-xl px-2"
+            >
+              View All
+            </button>
+          </div>
+          <!-- HollyWood -->
+          <div class="buttons bg-sky-100 border border-gray-900 rounded-xl">
+            <button
+              class="bg-sky-400 text-2xl font-bold rounded-xl m-1 py-1 px-2"
+            >
+              HollyWood :
+            </button>
+            <button
+              id="hwinsert"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-green-300 rounded-xl px-2"
+            >
+              Insert
+            </button>
+            <button
+              id="hwread"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-blue-300 rounded-xl px-2"
+            >
+              Read
+            </button>
+            <button
+              id="hwupdate"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-yellow-300 rounded-xl px-2"
+            >
+              Update
+            </button>
+            <button
+              id="hwdelete"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-red-300 rounded-xl px-2"
+            >
+              Delete
+            </button>
+            <button
+              id="hwall"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-fuchsia-300 rounded-xl px-2"
+            >
+              View All
+            </button>
+          </div>
+          <!-- Webseries hindi -->
+          <div class="buttons bg-red-100 border border-gray-900 rounded-xl">
+            <button
+              class="bg-red-400 text-2xl font-bold rounded-xl m-1 py-1 px-2"
+            >
+              WebSeries Hindi :
+            </button>
+            <button
+              id="whinsert"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-green-300 rounded-xl px-2"
+            >
+              Insert
+            </button>
+            <button
+              id="whread"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-blue-300 rounded-xl px-2"
+            >
+              Read
+            </button>
+            <button
+              id="whupdate"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-yellow-300 rounded-xl px-2"
+            >
+              Update
+            </button>
+            <button
+              id="whdelete"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-red-300 rounded-xl px-2"
+            >
+              Delete
+            </button>
+            <button
+              id="whall"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-fuchsia-300 rounded-xl px-2"
+            >
+              View All
+            </button>
+          </div>
+          <!-- web eng -->
+          <div class="buttons bg-yellow-100 border border-gray-900 rounded-xl">
+            <button
+              class="bg-yellow-400 text-2xl font-bold rounded-xl m-1 py-1 px-2"
+            >
+              WebSeries English :
+            </button>
+            <button
+              id="weinsert"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-green-300 rounded-xl px-2"
+            >
+              Insert
+            </button>
+            <button
+              id="weread"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-blue-300 rounded-xl px-2"
+            >
+              Read
+            </button>
+            <button
+              id="weupdate"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-yellow-300 rounded-xl px-2"
+            >
+              Update
+            </button>
+            <button
+              id="wedelete"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-red-300 rounded-xl px-2"
+            >
+              Delete
+            </button>
+            <button
+              id="weall"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-fuchsia-300 rounded-xl px-2"
+            >
+              View All
+            </button>
+          </div>
+          <!-- courses -->
+          <div class="buttons bg-lime-100 border border-gray-900 rounded-xl">
+            <button
+              class="bg-lime-400 text-2xl font-bold rounded-xl m-1 py-1 px-2"
+            >
+              Course :
+            </button>
+            <button
+              id="coinsert"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-green-300 rounded-xl px-2"
+            >
+              Insert
+            </button>
+            <button
+              id="coread"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-blue-300 rounded-xl px-2"
+            >
+              Read
+            </button>
+            <button
+              id="coupdate"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-yellow-300 rounded-xl px-2"
+            >
+              Update
+            </button>
+            <button
+              id="codelete"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-red-300 rounded-xl px-2"
+            >
+              Delete
+            </button>
+            <button
+              id="coall"
+              class="m-2 border border-gray-900 bg-gray-100 hover:bg-fuchsia-300 rounded-xl px-2"
+            >
+              View All
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Tables -->
+      <div
+        class="p-16 m-8 rounded-xl relative overflow-x-auto w-full border-2 border-black bg-amber-100"
+      >
+        <div class="text-2xl font-bold m-2">
+          Showing Table of :<span
+            id="tabletitle"
+            class="bg-sky-400 text-2xl font-bold rounded-xl m-1 py-1 px-2"
+          ></span>
+        </div>
+        <table id="data-table" class="border-2text-center w-full">
+          <thead class="text-xs uppercase text-black border-2 border-red-300">
+            <tr class="border-b text-xl bg-red-50">
+              <th class="px-6 py-3">Number</th>
+              <th class="px-6 py-3">Avatar</th>
+              <th class="px-6 py-3">Name</th>
+              <th class="px-6 py-3">Category</th>
+              <th class="px-6 py-3">Size</th>
+              <th class="px-6 py-3">Language</th>
+              <th class="px-6 py-3">Trailer</th>
+              <th class="px-6 py-3">Download</th>
+              <!-- Add more table headers as needed -->
+            </tr>
+          </thead>
+          <tbody class="border-2 border-red-300">
+            <!-- Table body will be dynamically generated -->
+          </tbody>
+        </table>
+
+        <button
+          id="cleartable"
+          class="bg-red-200 m-8 text-2xl border border-black rounded-xl p-1"
+        >
+          Clear Table
+        </button>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+
+    <script src="./Script/fireConfig.js"></script>
+
+    <!-- Default -->
+    <script src="./Script/default.js"></script>
+    <!-- DhollyWood -->
+    <script src="./Script/dhscript.js"></script>
+    <!-- HollyWood -->
+    <script src="./Script/hwscript.js"></script>
+    <!-- BollyWood -->
+    <script src="./Script/bwscript.js"></script>
+    <!-- WebSeries Hindi -->
+    <script src="./Script/whscript.js"></script>
+    <!-- WebSeries English -->
+    <script src="./Script/wescript.js"></script>
+    <!-- Courses -->
+    <script src="./Script/coscript.js"></script>
+    <!-- Tables -->
+    <script src="./Script/tables.js"></script>
+  </body>
+</html>
